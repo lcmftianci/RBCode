@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2ea3fe"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ly_chat_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="小智"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+  <!--    android:visibility="invisible" -->
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/home"
+            android:onClick="menu" />
+
+ <!--        <Button
+            android:id="@+id/button3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/button2"
+            android:onClick="getMessage"
+            android:text="读取小熊" /> -->
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_toRightOf="@+id/button2"
+            android:onClick="getMessage"
+            android:src="@drawable/sound" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="65dp"
+            android:onClick="getVoice"
+            android:src="@drawable/com" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ly_chat_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar" >
+
+        <Button
+            android:id="@+id/id_chat_send"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/chat_send_btn"
+            android:onClick="sendMessage"
+            android:text="发送" />
+
+        <EditText
+            android:id="@+id/id_chat_msg"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/id_chat_send"
+            android:layout_alignBottom="@+id/id_chat_send"
+            android:layout_marginRight="0dp"
+            android:layout_toLeftOf="@+id/id_chat_send"
+            android:layout_toRightOf="@+id/id_get_msg"
+            android:background="@drawable/login_edit_normal"
+            android:ems="10"
+            android:singleLine="true"
+            android:textSize="18sp" >
+
+            <requestFocus />
+        </EditText>
+
+<!--         <ImageButton
+            android:id="@+id/bt_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/id_chat_msg"
+            android:layout_marginLeft="0dp"
+            android:onClick="btn"
+            android:src="@drawable/sound1" /> -->
+
+        <EditText
+            android:id="@+id/id_get_msg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="0dp"
+            android:background="@drawable/login_edit_normal"
+            android:visibility="invisible"
+            android:ems="10"
+            android:textSize="18sp" />
+
+<!--         <Button
+            android:id="@+id/person_set"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/id_get_msg"
+            android:layout_toRightOf="@+id/id_get_msg"
+            android:text="选择发音人" />
+ -->
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/id_chat_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/ly_chat_bottom"
+        android:layout_below="@id/ly_chat_title"
+        android:cacheColorHint="#0000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:scrollbarStyle="outsideOverlay" >
+    </ListView>
+
+<!--     <Button
+        android:id="@+id/button4"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dp"
+        android:onClick="getVoice"
+        android:text="读取音频" />
+ -->
+</RelativeLayout>

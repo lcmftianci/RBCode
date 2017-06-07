@@ -1,0 +1,111 @@
+<!--
+   Copyright 2013 Csaba Szugyiczki
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res/com.lcmf.robot"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+      <LinearLayout
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+	>
+		<LinearLayout
+	        android:id="@+id/miniAdLinearLayout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:orientation="horizontal"/>
+	
+	</LinearLayout>
+    <com.lcmf.circle.CircleLayout
+        android:id="@+id/main_circle_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/main_selected_textView"
+        android:layout_gravity="center_horizontal"
+        circle:firstChildPosition="South" 
+        circle:rotateToCenter="true" 
+        circle:isRotating="true" >       
+<!--         circle:circleBackground="@drawable/green"  > -->
+
+
+        <com.lcmf.circle.CircleImageView
+            android:id="@+id/main_facebook_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/btn"
+            circle:name="@string/facebook" />
+
+        <com.lcmf.circle.CircleImageView
+            android:id="@+id/main_myspace_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn"
+            circle:name="@string/myspace" />
+
+        <com.lcmf.circle.CircleImageView
+            android:id="@+id/main_google_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn"
+            circle:name="@string/google" />
+
+        <com.lcmf.circle.CircleImageView
+            android:id="@+id/main_linkedin_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn"
+            circle:name="@string/linkedin" />
+
+        <com.lcmf.circle.CircleImageView
+            android:id="@+id/main_twitter_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn"
+            circle:name="@string/twitter" />
+
+        <com.lcmf.circle.CircleImageView
+            android:id="@+id/main_wordpress_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn"
+            circle:name="@string/wordpress" />
+        </com.lcmf.circle.CircleLayout>
+
+    <TextView
+        android:id="@+id/main_selected_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:text="这里有惊喜，试着点一点，这里也有陷阱别中枪" />
+
+</RelativeLayout>
